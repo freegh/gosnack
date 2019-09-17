@@ -1,0 +1,81 @@
+go
+
+function ตัวเล็กตัวใหญ่เป็น public ตัวเล็ก provate
+
+go doc fmt
+
+ประกาศตัวแปร 2 แบบ
+var
+:=   ประกาศใน function เท่านั้น  คือการ refer type
+rune type ตัวอักษร 1 ตัว
+%q print string ใส่ double quote
+
+defer จบ function ค่อยทำ
+
+ชื่อตัวแปรไม่ต้องใส่ type
+ไม่ตั้งชื่อแบบหนอน ฟฟ_aa ให้ใช้ aaBb
+
+*j pointer = &i address of i
+
+type struct : กลุ่มของ type
+
+Printf("% #v",v) show value and variable
+
+[]slices : data structure defer array : เพิ่มสมาชิกใช้ append เกิน cap จะ refer array ใหม่ที่มันสร้างเอง
+[...]array
+
+cap() : capacity of slices
+
+make([]int,,]
+
+go get golang.org/x/tour/pic
+
+interface ตัวกลางที่บอกว่าใช่้ร่วมกัน
+
+interface method struct pointer สามารถใช้แบบไม่มี pointer พร้อมกันได้
+พิจารณาว่า type ไหนควรแชร์ให้เป็น pointer
+
+go get github.com/AnuchitO/say
+
+go mod init ..folder.. ทำให้ถึงไม่อยู่ใน gopath ก็ run ได้
+
+go test วิธีใช้
+1.file name ลงท้ายด้วย _test.go ไม่เอามา compile
+2.function name ต้องชึ้นต้นด้วยคำว่า Test หลังจากนั้นต้องใช้ตัวใหญ่ 1 ตัว
+3.parameter ต้องใช้(t *testing.T)
+
+key
+crtl+d: select same any line
+crtl+k+c: comment
+crtl+k+u: uncomment
+
+
+
+
+
+api
+rest api tranfer json
+get select
+post insert
+
+json key string
+object {:}
+array [{:},{:}]
+
+https://github.com/gin-gonic/gin
+
+build library
+go build ...
+run library 
+./ชื่อ
+
+os.Getenv("DATABASE_URL")
+แล้ว 
+set DATABASE_URL=postgres://ftnlmkxq:4SJguCIpV-YM_W4p4LzcfF7p5BqwRYVg@salt.db.elephantsql.com:5432/ftnlmkxq
+
+varadic ใส่ได้เรื่อยๆ
+func aa(s ...string)
+func main(){
+	s :=[ ]string{"1","2"}
+	aa(s...)
+}
